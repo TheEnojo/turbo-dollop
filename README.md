@@ -1,2 +1,3 @@
 # turbo-dollop
-:star
+🔯
+
