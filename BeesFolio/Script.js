@@ -38,5 +38,3 @@ function getBlobPath(scrollTop) {
   // Modify this function to generate different blob shapes
   return `M50 ${10 + scrollTop * 0.1}C63.11 ${10 + scrollTop * 0.1} 74 ${20.89 + scrollTop * 0.1} 74 ${34 + scrollTop * 0.1}S63.11 ${58 + scrollTop * 0.1} 50 ${58 + scrollTop * 0.1}S26 ${47.11 + scrollTop * 0.1} 26 ${34 + scrollTop * 0.1}S36.89 ${10 + scrollTop * 0.1} 50 ${10 + scrollTop * 0.1}z`;
 }
-
-  
