@@ -1,16 +1,43 @@
 @font-face {
-    font-family: TanNimbus;
-    src: url(Assets/TAN-NIMBUS.ttf);
+  font-family: TanNimbus;
+  src: url(Assets/TAN-NIMBUS.ttf);
 }
+
 html,
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
 }
+
+body {
+  background-color: #343434;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+
+.shapes-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  transition: all 0.3s ease-out;
+}
+
+/* Add more styles for additional shapes or adjust the existing ones */
+
 
 .headerdiv {
   display: flex;
@@ -20,46 +47,50 @@ body {
 }
 
 
+.hero__h1 {
+  color: #ed6f63;
+  font-size: 160px;
+  font-family: TanNimbus;
+}
 
-.aboutdiv{
+
+.hero__button {
+  width: 140px;
+  height: 40px;
+  background-color: #fdfffc;
+  color: #03000c;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+
+
+.headerdiv__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  padding-right: 40px;
+}
+
+.headerdiv__link:hover {
+  cursor: pointer;
+  color: #ab897d;
+}
+
+.combineddiv {
+
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 500px;
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
 }
 
-.adiv1{
-width: 480px;
-height: 480px;
-background-color: #ed6f63;
-border: 1px solid black;
 
-}
 
-.adiv2{
-  width: 480px;
-  height: 480px;
-  border: 1px solid black;
-  
-}
 
-footer {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-}
 
-footer,
-footer a {
-color: black;
-}
 
-address {
-text-align: center;
-padding: 0.3em;
-}
 
 @media only screen and (max-width: 765px) {
   .headerdiv {
@@ -67,9 +98,9 @@ padding: 0.3em;
   }
 }
 
-.beccas-icon{
-font-family: TanNimbus;
-color: #fdfffc;
+.beccas-icon {
+  font-family: TanNimbus;
+  color: #fdfffc;
 }
 
 .headerdiv1 {
@@ -96,42 +127,37 @@ color: #fdfffc;
   }
 }
 
-a{
+a {
   text-decoration: none;
   color: #03000c;
 }
 
-a:hover{
+a:hover {
   color: #fdfffc;
 }
 
 .headerdiv__menu {
   display: none;
 }
+
 @media only screen and (max-width: 765px) {
   .headerdiv__menu {
     display: flex;
   }
 }
 
-.headerdiv__link {
-  text-decoration: none;
-  color: #fff;
-  font-size: 15px;
-  padding-right: 40px;
-}
-.headerdiv__link:hover {
-  cursor: pointer;
-  color: #ab897d;
+
+
+
+@media only screen and (max-width: 840px) {
+  .hero__h1 {
+    text-align: center;
+    font-size: 65px;
+  }
 }
 
-.combineddiv {
-  background-image: url("Assets/layered-waves-haikei.svg");
-  height: 700px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-}
+
+
 @media only screen and (max-width: 840px) {
   .combineddiv {
     height: auto;
@@ -146,6 +172,7 @@ a:hover{
   margin-left: 50px;
   margin-top: -70px;
 }
+
 @media only screen and (max-width: 840px) {
   .hero {
     display: block;
@@ -169,12 +196,14 @@ a:hover{
   margin-top: 5px;
   overflow: hidden;
 }
+
 .scrolling-words-box .scrolling-words__list {
   margin: 0px;
   padding: 0px;
   -webkit-animation: scrollUp 6s infinite;
-          animation: scrollUp 6s infinite;
+  animation: scrollUp 6s infinite;
 }
+
 .scrolling-words-box .scrolling-words__list .scrolling-words__item {
   display: flex;
   align-items: center;
@@ -182,21 +211,25 @@ a:hover{
   color: #fdfffc;
   font-size: 30px;
 }
+
 @media only screen and (max-width: 840px) {
-  .scrolling-words-box  {
+  .scrolling-words-box {
     margin: 0px auto 0px auto;
     text-align: center;
 
+  }
+
+  .scrolling-words-container {
+    margin: 0px auto 0px auto;
+    text-align: center;
+  }
 }
-.scrolling-words-container{
-  margin: 0px auto 0px auto;
-  text-align: center;
-}
-}
+
 .scrolling-words__span {
   color: #fdfffc;
   font-size: 30px;
 }
+
 @media only screen and (max-width: 840px) {
   .scrolling-words__span {
     display: none;
@@ -205,34 +238,51 @@ a:hover{
 }
 
 @-webkit-keyframes scrollUp {
-  25%, 25% {
+
+  25%,
+  25% {
     transform: translateY(-20%);
   }
-  40%, 50% {
+
+  40%,
+  50% {
     transform: translateY(-45%);
   }
-  65%, 75% {
+
+  65%,
+  75% {
     transform: translateY(-70%);
   }
-  90%, 100% {
+
+  90%,
+  100% {
     transform: translateY(5%);
   }
 }
 
 @keyframes scrollUp {
-  25%, 25% {
+
+  25%,
+  25% {
     transform: translateY(-20%);
   }
-  40%, 50% {
+
+  40%,
+  50% {
     transform: translateY(-45%);
   }
-  65%, 75% {
+
+  65%,
+  75% {
     transform: translateY(-70%);
   }
-  90%, 100% {
+
+  90%,
+  100% {
     transform: translateY(5%);
   }
 }
+
 @media only screen and (max-width: 840px) {
   .hero__text {
     width: 100%;
@@ -240,60 +290,36 @@ a:hover{
     flex-direction: column;
     justify-content: center;
   }
-  .scrolling-words__list{
+
+  .scrolling-words__list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
   }
 }
 
-.hero__image {
-  margin-right: 100px;
-  margin-top: 100px;
-  -o-object-fit: contain;
-     object-fit: contain;
-     
-}
+
 @media only screen and (max-width: 840px) {
   .hero__image {
     margin: 50px auto 0px auto;
     width: 100%;
   }
 }
-  
-
-.hero__h1 {
-  color: #ed6f63;
-  font-size: 160px;
-  font-family: TanNimbus;
-}
-@media only screen and (max-width: 840px) {
-  .hero__h1 {
-    text-align: center;
-    font-size: 65px;
-  }
-}
 
 
 
-.hero__button {
-  width: 140px;
-  height: 40px;
-  background-color: #fdfffc;
-  color: #03000c;
-  border: none;
-  border-radius: 4px;
-  margin-top: 20px;
-}
+
+
 @media only screen and (max-width: 840px) {
   .hero__button {
     margin: 40px auto 0px auto;
     width: 200px;
-    
+
   }
 }
+
 .hero__button:hover {
   cursor: pointer;
   background-color: #ed6f63;
@@ -305,33 +331,24 @@ a:hover{
   .hero__image {
     margin: 0px auto 0px -20%;
     max-width: fit-content;
-    
+
   }
-.hero{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0px auto 0px auto;
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px auto 0px auto;
+
+  }
+
+
+  .hero__text {
+    width: 100%;
+
+
+  }
+
 
 }
-
-
-.hero__text{
-width: 100%;
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-
-
 
