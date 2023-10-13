@@ -46,6 +46,14 @@ body {
 }
 
 
+a {
+  text-decoration: none;
+  color: #03000c;
+}
+
+
+
+
 .hero__h1 {
   color: #ed6f63;
   font-size: 160px;
@@ -54,14 +62,26 @@ body {
 
 
 .hero__button {
-  width: 140px;
-  height: 40px;
+  display: inline-block;
+    padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
   background-color: #fdfffc;
   color: #03000c;
   border: none;
   border-radius: 4px;
   margin-top: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
 }
+
+
+.hero__button:hover {
+  cursor: pointer;
+  color: #ed6f63;
+  
+}
+
 
 
 
@@ -125,15 +145,6 @@ body {
   .headerdiv__list {
     display: none;
   }
-}
-
-a {
-  text-decoration: none;
-  color: #03000c;
-}
-
-a:hover {
-  color: #fdfffc;
 }
 
 .headerdiv__menu {
@@ -323,12 +334,6 @@ a:hover {
   }
 }
 
-.hero__button:hover {
-  cursor: pointer;
-  background-color: #ed6f63;
-  color: #fdfffc;
-}
-
 
 @media only screen and (min-width: 840px) and (max-width: 1024px) {
   .hero__image {
@@ -387,7 +392,7 @@ list-style-type: square;
   .about-section{
     margin-top: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 50px;
     color: #fdfffc;
     flex-wrap: wrap;
@@ -425,3 +430,38 @@ font-size: 24px;
 
 
 
+/* Additional styles for the contact section and footer */
+#contact {
+ 
+  color: #fdfffc;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#contact h2 {
+  color: #fdfffc;
+  display: inline-block;
+  font-size: 2em;
+  margin-bottom: 20px;
+  
+}
+.phone,.emailp{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.email{
+  color: #fdfffc;
+}
+
+.email:hover{
+  text-decoration: underline;
+}
+
+
+footer {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #343434;
+  font-size: 16px;
+  color: #fdfffc;
+  padding: 20px 0;
+  text-align: center;
+}
